@@ -2,6 +2,9 @@ package com.example.awstest1;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 @Controller
 public class PageController {
 
@@ -14,4 +17,6 @@ public class PageController {
     public String test2(){
         return "test2";
     }
+
+
 }
