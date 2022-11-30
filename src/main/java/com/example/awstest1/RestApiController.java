@@ -41,9 +41,23 @@ public class RestApiController {
         return  sb.toString();
     }
     //entrySet() - key와 value 값 모두 출력
+    @GetMapping(value="/test5")
+    public String Test5(TestDTO dto){
+        return dto.toString();
+    }
 
+    @PostMapping(value="/test6")
+    public String PostTest6(@RequestBody Map<String,Object> dto){
+        StringBuilder sb = new StringBuilder();
+        dto.entrySet().forEach(map ->{
+            sb.append(map.getKey()+":"+map.getValue()+"\n");
+        });
+        return sb.toString();
+    }
 
-
-
+    @PostMapping(value="/test7")
+    public String PostTest7(@RequestBody TestDTO dto){
+        return dto.toString();
+    }
 
 }
