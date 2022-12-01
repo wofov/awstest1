@@ -46,6 +46,7 @@ public class RestApiController {
         return dto.toString();
     }
 
+    //postman사용할 때 POST는 Params말고 Body에/raw/Text말고 JSON으로 할 것
     @PostMapping(value="/test6")
     public String PostTest6(@RequestBody Map<String,Object> dto){
         StringBuilder sb = new StringBuilder();
@@ -59,5 +60,6 @@ public class RestApiController {
     public String PostTest7(@RequestBody TestDTO dto){
         return dto.toString();
     }
+
 
 }
